@@ -6,6 +6,7 @@ package demoproject37b.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.event.ActionListener;
 import javax.swing.ImageIcon;
 import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
 
@@ -276,4 +277,15 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JLabel registerLabel;
     private javax.swing.JButton showPasswordButton;
     // End of variables declaration//GEN-END:variables
+
+    public javax.swing.JTextField getEmailTextField(){
+        return emailTextField;
+    }
+    public javax.swing.JPasswordField getPasswordField(){
+        return passwordField;
+    }
+    public void loginUser(ActionListener listener){
+        loginButton.addActionListener(listener);
+    }
+
 }

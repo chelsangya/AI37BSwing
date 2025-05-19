@@ -4,6 +4,8 @@
  */
 package demoproject37b.view;
 
+import java.awt.event.ActionListener;
+
 /**
  *
  * @author sangyakoirala
@@ -38,22 +40,12 @@ public class EntryView extends javax.swing.JFrame {
         loginButton.setForeground(new java.awt.Color(255, 255, 255));
         loginButton.setText("Login");
         loginButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 1, true));
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
-            }
-        });
 
         registerButton.setBackground(new java.awt.Color(25, 25, 112));
         registerButton.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         registerButton.setForeground(new java.awt.Color(255, 255, 255));
         registerButton.setText("Register");
         registerButton.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 102), 1, true));
-        registerButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                registerButtonActionPerformed(evt);
-            }
-        });
 
         welcomeLabel.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         welcomeLabel.setForeground(new java.awt.Color(25, 25, 112));
@@ -101,18 +93,6 @@ public class EntryView extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
-       new LoginView().setVisible(true);
-       dispose();
-    }//GEN-LAST:event_loginButtonActionPerformed
-
-    private void registerButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registerButtonActionPerformed
-        // TODO add your handling code here:
-        new RegistrationView().setVisible(true);
-        dispose();
-    }//GEN-LAST:event_registerButtonActionPerformed
-
     /**
      * @param args the command line arguments
      */
@@ -157,4 +137,11 @@ public class EntryView extends javax.swing.JFrame {
     private javax.swing.JButton registerButton;
     private javax.swing.JLabel welcomeLabel;
     // End of variables declaration//GEN-END:variables
+
+    public void addLoginNavigation(ActionListener listener){
+        loginButton.addActionListener(listener);
+    }
+
+
+
 }
